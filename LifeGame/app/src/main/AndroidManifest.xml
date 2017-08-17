@@ -28,6 +28,14 @@
         <activity android:name=".GymActivity"
             android:screenOrientation="landscape">
         </activity>
+        <activity android:name=".ShopActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".ContestActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".BakeryActivity"
+            android:screenOrientation="landscape">
+        </activity>
     </application>
-
 </manifest>

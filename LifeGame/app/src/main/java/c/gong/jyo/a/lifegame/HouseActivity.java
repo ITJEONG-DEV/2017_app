@@ -11,8 +11,6 @@ import android.view.View;
 
 public class HouseActivity extends AppCompatActivity
 {
-    playerStatus ps;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -20,26 +18,26 @@ public class HouseActivity extends AppCompatActivity
         setContentView(R.layout.activity_house);
 
         Intent it = new Intent(this.getIntent());
-        ps = new playerStatus( it.getFloatArrayExtra("every") );
     }
 
     public void onCook(View v)
     {
-
+        //pop-up
     }
 
     public void goRoom(View v)
     {
         Intent it = new Intent(HouseActivity.this, RoomActivity.class);
+        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(it);
-        it.putExtra( "every", ps.getEverything() );
     }
 
     public void goOut(View v)
     {
         Intent it = new Intent(HouseActivity.this, StreetActivity.class);
-        it.putExtra( "every", ps.getEverything() );
         it.putExtra("streetNum", 1);
+        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(it);
     }
 
 }

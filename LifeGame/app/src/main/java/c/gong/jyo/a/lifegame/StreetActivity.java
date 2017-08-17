@@ -12,7 +12,6 @@ import android.widget.Button;
 
 public class StreetActivity extends AppCompatActivity
 {
-    playerStatus ps;
     Button b1, b2, b3;
 
     int streetNum;
@@ -25,7 +24,6 @@ public class StreetActivity extends AppCompatActivity
 
         Intent it = new Intent(this.getIntent());
         streetNum = it.getIntExtra("streetNum", 0);
-        ps = new playerStatus( it.getFloatArrayExtra("every") );
 
         b1 = (Button)findViewById(R.id.button1);
         b2 = (Button)findViewById(R.id.button2);
@@ -75,6 +73,7 @@ public class StreetActivity extends AppCompatActivity
     public void onButton(View v)
     {
         Intent it;
+        boolean a = false;
 
         int touchNum = 0;
 
@@ -89,12 +88,27 @@ public class StreetActivity extends AppCompatActivity
                 {
                     case 1:
                         it = new Intent(StreetActivity.this, GymActivity.class);
-                        it.putExtra( "every", ps.getEverything() );
+                        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         startActivity(it);
+                        break;
+                    case 2:
+                        it = new Intent(StreetActivity.this, HouseActivity.class);
+                        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(it);
+                        break;
+                    case 3:
+                        it = new Intent(StreetActivity.this, ShopActivity.class);
+                        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(it);
+                        break;
+                }
+            case 2:
+                switch( touchNum )
+                {
+                    case 1:
                     case 2:
                     case 3:
                 }
-            case 2:
             case 3:
             case 4:
             case 5:

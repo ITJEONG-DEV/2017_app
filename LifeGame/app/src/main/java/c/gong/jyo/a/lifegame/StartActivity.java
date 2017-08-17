@@ -13,13 +13,14 @@ public class StartActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        playerInfo.init();
     }
 
     public void onStart(View v)
     {
-        playerStatus ps = new playerStatus();
         Intent it = new Intent(StartActivity.this, HouseActivity.class);
-        it.putExtra( "every", ps.getEverything() );
+        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(it);
     }
 

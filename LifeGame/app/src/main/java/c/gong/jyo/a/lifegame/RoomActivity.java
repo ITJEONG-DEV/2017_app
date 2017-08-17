@@ -11,8 +11,6 @@ import android.view.View;
 
 public class RoomActivity extends AppCompatActivity
 {
-    playerStatus ps;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -20,23 +18,20 @@ public class RoomActivity extends AppCompatActivity
         setContentView(R.layout.activity_house);
 
         Intent it = new Intent(this.getIntent());
-        ps = new playerStatus( it.getFloatArrayExtra("every") );
     }
 
     public void readBook(View v)
     {
-
     }
 
     public void onComputer(View v)
     {
-
     }
 
     public void goBack(View v)
     {
         Intent it = new Intent(RoomActivity.this, HouseActivity.class);
-        it.putExtra( "every", ps.getEverything() );
+        it.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(it);
     }
 }
