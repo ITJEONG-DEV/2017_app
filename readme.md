@@ -15,7 +15,15 @@
 
 
 <img src="/.images/title.png">
+<br>
 <img src="/.images/ingame_1.png">
+<br>
+<img src="/.images/ingame_2.png">
+<br>
+<img src="/.images/ingame_3.png">
+<br>
+<img src="/.images/ingame_4.png">
+<br>
 
 
 
