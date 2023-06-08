@@ -33,7 +33,7 @@
 
 | Android Studio | java |
 | :--------: | :--------: |
-|   <img src="/.images/androidstudio.png" width="200" height="135"/>   |   <img src="/.images/java.png" width="200" height="100"/>    |
+|   <img src="https://raw.githubusercontent.com/ITJEONG-DEV/README/main/.images/androidstudio.png" width="200" height="135"/>   |   <img src="https://raw.githubusercontent.com/ITJEONG-DEV/README/main/.images/java.png" width="135" height="135"/>    |
 
 <br>
 
